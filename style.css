@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma;
+    
+}
+#main{
+    width: 100%;
+    height: 100vh;
+    background: #e8eaf1;
+}
+#Analytics{
+    width: 100%;
+    height: 100vh;
+    background: #919191;
+}
+
+.sidebar{
+    width: 60px;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #dadce3;
+    transition: ease-in-out 0.3s;
+    overflow: hidden;
+    /* float: right; */
+    box-shadow: 3px 3px 3px #00000080;
+    z-index: 2;
+    position: relative;
+  
+}
+.sidebar:hover{
+    width: 200px;
+}
+.sidebar:hover > .item > .text{
+    opacity: 1;
+}
+hr{
+    height: 1px;
+    color: #919191;
+    margin: 15px 0;
+}
+.item{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    transition: all ease-in 0,3s;
+}
+.item:hover{
+    background: #e8eaf1;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
+}
+.item .icon{
+    width: 40px;
+    height: 100%;
+    flex-shrink: 0;
+    fill: #424242;
+    
+}
+.item .text{
+    opacity: 0;
+    transition: ease-in-out 0.3s;
+    transition-delay: .2s;
+    margin-left: 15px;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #000;
+   
+}
+.item:nth-child(7){
+    margin-top: 260px;
+}
+.hero {
+    position: absolute;
+    margin-left: 50px; /* Initial space for the sidebar */
+    transition: margin-left 0.3s, width 0.3s; /* Transition for smooth resizing */
+    width: calc(100% - 100px); /* Adjust this value to create space for the sidebar */
+    height: 100vh;
+    /* background: #ffffff;  */
+    display: flex; /* Flexbox for content arrangement */
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align content to the start */
+    padding: 20px; /* Adjust padding for content */
+    /* Other styles for the hero section */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjust the sidebar width on hover */
+.sidebar:hover + .hero {
+    margin-left: 100px; /* Adjust this value to match the expanded sidebar width */
+    width: calc(100% - 250px); /* Adjust this value to fit the remaining space */
+}
+p{
+    font-size: 14px solid;
+    text-align: center;
+}
+.logo{
+    width: 180px;
+}
